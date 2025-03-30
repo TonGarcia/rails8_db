@@ -2,13 +2,13 @@ module RailsDb
   class DashboardController < RailsDb::ApplicationController
 
     def index
-      puts '1. Starting index action'
+      Debuggers.print('1. Starting index action')
       begin
-        puts '2. Before render'
+        Debuggers.print('2. Before render')
         render
-        puts '3. After render'
+        Debuggers.print '3. After render'
       rescue => e
-        puts "4. Error in index: #{e.message}"
+        Debuggers.print "4. Error in index: #{e.message}"
         puts e.backtrace
         raise
       end

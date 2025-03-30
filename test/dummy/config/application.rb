@@ -29,6 +29,21 @@ module Dummy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    # Configure asset pipeline
+    config.assets.enabled = true
+    config.assets.initialize_on_precompile = false
+    
+    # Add gem assets to the asset pipeline
+    gem_path = Rails.root.join('../../..').to_s
+    
+    # Configure Propshaft
+    if defined?(Propshaft)
+      config.assets.configure do |env|
+        env.append_path File.join(gem_path, 'app/assets')
+        env.append_path File.join(gem_path, 'app/assets/images')
+      end
+    end
   end
 end
 
