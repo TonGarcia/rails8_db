@@ -23,6 +23,12 @@ Supports: PostgreSQL, MySQL, SQLite. Not sure about other adapters. Since gem is
 
 For older versions of Rails (Rails 3.2, 4.X) please user `gem "rails_db", "1.6"`.
 
+### MySQL 
+
+1. `brew install zstd` 
+2. `brew --prefix zstd`
+3. add it into your ~/.zshrc: `export LIBRARY_PATH="$LIBRARY_PATH:/opt/homebrew/opt/zstd/lib"` and source it and run bundle again
+
 ## Note (!)
 
 Gem works with ruby 1.9.3 but you need to use kaminari < 1.0.0 gem and rails_db <= 1.6. Please add to gemfile `gem 'kaminari', '< 1.0.0'`.

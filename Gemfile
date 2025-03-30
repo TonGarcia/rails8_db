@@ -1,3 +1,7 @@
+
+ruby '3.3.6'
+# ruby=3.3.6@rails8_db
+
 source 'https://rubygems.org'
 
 gemspec
