@@ -13,8 +13,16 @@ module RailsDb
     private
 
     def verify_access
-      result = RailsDb.verify_access_proc.call(self)
-      redirect_to('/', error: 'Access Denied', status: 401) unless result
+      puts '5. Starting verify_access'
+      begin
+        result = RailsDb.verify_access_proc.call(self)
+        puts "6. verify_access result: #{result}"
+        redirect_to('/', error: 'Access Denied', status: 401) unless result
+      rescue => e
+        puts "7. Error in verify_access: #{e.message}"
+        puts e.backtrace
+        raise
+      end
     end
 
     def per_page

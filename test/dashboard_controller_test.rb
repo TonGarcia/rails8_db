@@ -8,9 +8,10 @@ class DashboardControllerTest < ActionDispatch::IntegrationTest
     Account.delete_all
     Customer.delete_all
 
-    user      = User.create(name: 'Igor')
-    edit_user = User.create(name: 'Edit')
-    customer  = Customer.create(name: 'Customer 1', bio: 'this is bio text')
+    # Create users with required attributes
+    user = User.create!(name: 'Igor')
+    edit_user = User.create!(name: 'Edit')
+    customer = Customer.create!(name: 'Customer 1', bio: 'this is bio text')
 
     get '/rails/db'
     assert_equal 200, status

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'rails_db'
 
 class RailsDbHelpersTest < ActionView::TestCase
   include RailsDb::Helpers

@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ransack', '>= 4.3.0'
   s.add_dependency 'kaminari', '>= 1.2.2'
   s.add_dependency 'csv', '>= 3.3.3'
-  s.add_dependency 'propshaft', '~> 0.8.0'
+  s.add_dependency 'propshaft', '~> 1.1'
 
   s.add_development_dependency "launchy", '>= 3.1.1'
   s.add_development_dependency "sqlite3", '~> 1.7.3'

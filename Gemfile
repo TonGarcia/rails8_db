@@ -6,7 +6,7 @@ ruby '3.3.6'
 source 'https://rubygems.org'
 
 gem 'rails', '~> 8.0.2'
-gem 'propshaft', '~> 0.8.0'
+gem 'propshaft', '~> 1.1'
 
 gem 'terminal-table', '~> 4.0'
 gem 'simple_form', '~> 5.3.1'

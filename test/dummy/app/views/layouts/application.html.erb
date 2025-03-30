@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dummy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+  <head>
+    <title>Dummy</title>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'codemirror/codemirror.js' %>
+    <%= javascript_include_tag 'codemirror/codemirror/modes/sql.js' %>
+    <%= javascript_include_tag 'codemirror/codemirror/addons/hint/show-hint.js' %>
+    <%= javascript_include_tag 'codemirror/codemirror/addons/hint/sql-hint.js' %>
+    <%= javascript_include_tag 'rails_db/jquery' %>
+    <%= javascript_include_tag 'rails_db/jquery.cookie' %>
+    <%= javascript_include_tag 'rails_db/rails-ujs' %>
+    <%= javascript_include_tag 'rails_db/foundation.min' %>
+    <%= javascript_include_tag 'rails_db/sticky' %>
+    <%= javascript_include_tag 'rails_db/show_hide_columns.js' %>
+    <%= javascript_include_tag 'rails_db/search.js' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
   <body>
-  <div class="container theme-showcase" role="main">
-    <%= yield %>
-  </div>
-
+    <div class="container theme-showcase" role="main">
+      <%= yield %>
+    </div>
   </body>
 </html>

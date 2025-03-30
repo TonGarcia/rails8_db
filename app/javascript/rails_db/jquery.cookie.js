@@ -8,10 +8,10 @@
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD (Register as an anonymous module)
-		define(['jquery'], factory);
+		define(['app/javascripts/rails_db/jquery'], factory);
 	} else if (typeof exports === 'object') {
 		// Node/CommonJS
-		module.exports = factory(require('jquery'));
+		module.exports = factory(require('app/javascripts/rails_db/jquery'));
 	} else {
 		// Browser globals
 		factory(jQuery);
