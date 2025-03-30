@@ -13,3 +13,4 @@ test/standalone/log/*.log
 test/standalone/tmp/
 
 test/dummy/db/*.sqlite3*
+.idea

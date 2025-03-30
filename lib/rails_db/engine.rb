@@ -3,8 +3,9 @@ module RailsDb
     isolate_namespace RailsDb
     config.autoload_paths += Dir["#{config.root}/lib"]
 
-    initializer 'rails_db.assets_precompile', :group => :all do |app|
-      app.config.assets.paths << root.join("test", "dummy", "public", "assets")
+    initializer 'rails_db.assets' do |app|
+      app.config.assets.paths << root.join("app/assets")
+      app.config.assets.precompile += %w( rails_db/logo.png )
     end
 
     initializer 'rails_db.helpers' do

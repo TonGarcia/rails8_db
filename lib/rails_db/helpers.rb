@@ -28,6 +28,15 @@ module RailsDb
       }
     }
 
+    def insert_js_file(filename)
+      content = Rails.application.assets.find_asset("rails_db/javascripts/#{filename}")
+      if content
+        javascript_tag content.source
+      else
+        javascript_include_tag "rails_db/javascripts/#{filename}"
+      end
+    end
+
     def rails_db_data_table(table_name, options = {})
       options.reverse_merge!(
         style: :default,

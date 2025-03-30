@@ -1,30 +1,35 @@
+# Gemfile for test/dummy
 
 ruby '3.3.6'
 # ruby=3.3.6@rails8_db
 
 source 'https://rubygems.org'
 
-gemspec
+gem 'rails', '~> 8.0.2'
+gem 'propshaft', '~> 0.8.0'
 
-gem 'rails', '7.1.2'
-gem 'terminal-table'
-gem 'simple_form', '>= 5.0.1'
-gem 'ransack', '>= 2.3.2'
-gem 'kaminari', '>= 0.17.0'
+gem 'terminal-table', '~> 4.0'
+gem 'simple_form', '~> 5.3.1'
+gem 'ransack', '~> 4.3.0'
+gem 'kaminari', '~> 1.2.2'
 
-# for Rails 5+
+# for Rails 5+ (and compatible with 7.1)
 gem 'rubyzip', '>= 1.2.1'
 gem 'caxlsx'
 gem 'caxlsx_rails'
 
 group :assets do
-  gem 'uglifier'
+  gem 'sassc', '~> 2.4'
+  gem 'terser', '~> 1.2.5'
 end
 
 group :test do
-  gem "sqlite3", '~> 1.4'
+  gem "sqlite3", '~> 2.1'
 end
 
-gem 'will_paginate'
+gem 'will_paginate', '~> 4.0'
 
-gem 'paranoia'
+gem 'paranoia', '~> 3.0.1'
+
+# For development
+gem 'puma', '~> 6.6.0'

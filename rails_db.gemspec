@@ -17,24 +17,25 @@ Gem::Specification.new do |s|
 
   s.executables   = ["railsdb", "rails_db", 'runsql']
 
-  s.add_dependency 'rails', ">= 5.0.0"
-  s.add_dependency 'terminal-table'
-  s.add_dependency 'simple_form', '>= 5.0.1'
-  s.add_dependency 'activerecord'
-  s.add_dependency 'ransack', '>= 2.3.2'
-  s.add_dependency 'kaminari'
-  s.add_dependency 'csv'
+  s.add_dependency 'rails', ">= 8.0.2"
+  s.add_dependency 'terminal-table', '~> 4.0'
+  s.add_dependency 'simple_form', '>= 5.3.1'
+  s.add_dependency 'activerecord', ">= 8.0.2"
+  s.add_dependency 'ransack', '>= 4.3.0'
+  s.add_dependency 'kaminari', '>= 1.2.2'
+  s.add_dependency 'csv', '>= 3.3.3'
+  s.add_dependency 'propshaft', '~> 0.8.0'
 
-  s.add_development_dependency "launchy"
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency "mysql2"
-  s.add_development_dependency "pg"
-  s.add_development_dependency "caxlsx_rails"
-  s.add_development_dependency 'will_paginate', '>= 3.1.0'
-  s.add_development_dependency 'mime-types'
-  s.add_development_dependency 'paranoia'
-  s.add_development_dependency 'pry-rails'
-  s.add_development_dependency 'puma'
+  s.add_development_dependency "launchy", '>= 3.1.1'
+  s.add_development_dependency "sqlite3", '~> 1.7.3'
+  s.add_development_dependency "mysql2", '>= 0.5.6'
+  s.add_development_dependency "pg", '>= 1.5.9'
+  s.add_development_dependency "caxlsx_rails", '>= 0.6.4'
+  s.add_development_dependency 'will_paginate', '>= 4.0.1'
+  s.add_development_dependency 'mime-types', '>= 3.6.2'
+  s.add_development_dependency 'paranoia', '>= 3.6.2'
+  s.add_development_dependency 'pry-rails', '>= 0.3.11'
+  s.add_development_dependency 'puma', '>= 6.6.0'
 
   # Removed sprockets-rails
   # s.add_development_dependency 'sprockets-rails'
