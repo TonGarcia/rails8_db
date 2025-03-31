@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description = "Quick way to inspect your Rails database, see content of tables, filter, export them to CSV, Excel, EXPLAIN SQL and run SQL queries."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,lib,test}/**/*", "rails_db.gemspec", "Gemfile", "Gemfile.lock", "MIT-LICENSE", "Rakefile", "README.rdoc", "bin/rails_db", "bin/railsdb", "bin/runsql"] + Dir.glob("test/dummy/public/assets/**/*")
+  s.files = Dir["{app,config,lib,test}/**/*", "rails_db.gemspec", "Gemfile", "Gemfile.lock", "MIT-LICENSE", "Rakefile", "README.rdoc", "bin/rails_db", "bin/railsdb", "bin/runsql"]
   s.test_files = Dir["test/**/*"]
 
   s.executables   = ["railsdb", "rails_db", 'runsql']
@@ -36,11 +36,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'paranoia', '>= 3.6.2'
   s.add_development_dependency 'pry-rails', '>= 0.3.11'
   s.add_development_dependency 'puma', '>= 6.6.0'
-
-  # Removed sprockets-rails
-  # s.add_development_dependency 'sprockets-rails'
-
-  # s.add_development_dependency 'populator'
-  # s.add_development_dependency 'faker'
-  # s.add_development_dependency 'pry'
 end
