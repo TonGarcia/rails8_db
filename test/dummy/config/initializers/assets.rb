@@ -18,13 +18,8 @@ Rails.application.config.assets.configure do |env|
   # Add the gem's asset paths
   env.append_path File.join(gem_path, 'app/assets')
   env.append_path File.join(gem_path, 'app/assets/images')
-  
-  # Configure Propshaft to handle the assets
-  if defined?(Propshaft)
-    env.append_path File.join(gem_path, 'app/assets')
-    env.append_path File.join(gem_path, 'app/assets/images')
-  end
+  env.append_path File.join(gem_path, 'app/assets/images/rails_db')
 end
 
-# Precompile additional assets
+# Ensure the gem's assets are precompiled
 Rails.application.config.assets.precompile += %w( rails_db/logo.png rails_db/logo_mini.png )

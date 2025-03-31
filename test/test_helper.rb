@@ -8,6 +8,10 @@ ActiveRecord::Migrator.migrations_paths = [File.expand_path("../../test/dummy/db
 ActiveRecord::Migrator.migrations_paths << File.expand_path('../../db/migrate', __FILE__)
 require "rails/test_help"
 
+# Ensure assets are precompiled for tests
+Rails.application.config.assets.compile = true
+Rails.application.config.assets.digest = false
+
 Debuggers.print "Gemspec Files:"
 spec = Gem::Specification.load("#{`pwd`.chomp}/rails_db.gemspec")
 Debuggers.print "spec.files.inspect: #{spec.files.inspect}"

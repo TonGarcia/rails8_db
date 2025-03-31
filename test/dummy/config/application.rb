@@ -38,11 +38,10 @@ module Dummy
     gem_path = Rails.root.join('../../..').to_s
     
     # Configure Propshaft
-    if defined?(Propshaft)
-      config.assets.configure do |env|
-        env.append_path File.join(gem_path, 'app/assets')
-        env.append_path File.join(gem_path, 'app/assets/images')
-      end
+    config.assets.configure do |env|
+      env.append_path File.join(gem_path, 'app/assets')
+      env.append_path File.join(gem_path, 'app/assets/images')
+      env.append_path File.join(gem_path, 'app/assets/images/rails_db')
     end
   end
 end

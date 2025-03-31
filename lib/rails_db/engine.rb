@@ -5,7 +5,6 @@ module RailsDb
 
     initializer 'rails_db.assets' do |app|
       app.config.assets.paths << root.join("app/assets")
-      app.config.assets.precompile += %w( rails_db/logo.png )
     end
 
     initializer 'rails_db.helpers' do

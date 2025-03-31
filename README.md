@@ -10,6 +10,9 @@ Please **share** this gem with your friends to get more feedback. I would really
 ![Rails DB overview](https://raw.githubusercontent.com/igorkasyanchuk/rails_db/master/docs/railsdb.png)
 ![Rails DB run SQL](https://raw.githubusercontent.com/igorkasyanchuk/rails_db/master/docs/runsql.png)
 
+## Build and Publish
+1. Build: `gem build rails_db.gemspec`
+2. Publish: `gem push rails8_db-0.0.4.gem`
 
 Quick way to inspect your Rails database **http://localhost:12345/rails/db**, see content of tables, export them to CSV, EXPLAIN SQL and run SQL queries.
 
