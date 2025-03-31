@@ -22,15 +22,8 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  begin
-    config.serve_static_files = true
-  rescue NoMethodError
-  end
-
-  begin
-    config.public_file_server.enabled = true
-  rescue NoMethodError
-  end
+  config.serve_static_files = true
+  config.public_file_server.enabled = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier

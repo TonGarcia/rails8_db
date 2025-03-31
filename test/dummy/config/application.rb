@@ -6,11 +6,6 @@ Bundler.require(*Rails.groups)
 
 require "rails_db"
 
-begin
-  Ransack::Adapters::ActiveRecord::Base.class_eval('remove_method :search')
-rescue Exception
-end
-
 module Dummy
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -29,20 +24,5 @@ module Dummy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
-
-    # Configure asset pipeline
-    config.assets.enabled = true
-    config.assets.initialize_on_precompile = false
-    
-    # Add gem assets to the asset pipeline
-    gem_path = Rails.root.join('../../..').to_s
-    
-    # Configure Propshaft
-    config.assets.configure do |env|
-      env.append_path File.join(gem_path, 'app/assets')
-      env.append_path File.join(gem_path, 'app/assets/images')
-      env.append_path File.join(gem_path, 'app/assets/images/rails_db')
-    end
   end
 end
-

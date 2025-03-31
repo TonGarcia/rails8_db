@@ -1,6 +1,5 @@
 module RailsDb
   module Helpers
-    # TODO check styles
     STYLES = {
       default: {
         table: 'table',
@@ -28,15 +27,6 @@ module RailsDb
       }
     }
 
-    def insert_js_file(filename)
-      content = Rails.application.assets.find_asset("rails_db/javascripts/#{filename}")
-      if content
-        javascript_tag content.source
-      else
-        javascript_include_tag "rails_db/javascripts/#{filename}"
-      end
-    end
-
     def rails_db_data_table(table_name, options = {})
       options.reverse_merge!(
         style: :default,
@@ -48,15 +38,15 @@ module RailsDb
         order: :asc
       )
       table = RailsDb::Table.new(table_name)
-        .limit(options[:limit])
-        .order_by(options[:order_by])
-        .select(options[:columns])
-        .order(options[:order])
+                            .limit(options[:limit])
+                            .order_by(options[:order_by])
+                            .select(options[:columns])
+                            .order(options[:order])
 
       render '/rails_db/shared/data_table', table: table,
-                                            header: options[:header],
-                                            footer: options[:footer],
-                                            style:  options[:style]
+             header: options[:header],
+             footer: options[:footer],
+             style:  options[:style]
     end
 
     def rails_db_data_table_sql(sql, options = {})
@@ -64,14 +54,14 @@ module RailsDb
         style: :default,
         header: true,
         footer: false,
-      )
+        )
       sql        = "#{sql}".strip
       sql_query  = RailsDb::SqlQuery.new(sql, false).execute
 
       render '/rails_db/shared/sql_result', sql_query: sql_query,
-                                            header: options[:header],
-                                            footer: options[:footer],
-                                            style:  options[:style]
+             header: options[:header],
+             footer: options[:footer],
+             style:  options[:style]
     end
 
     def rails_db_table_style(tag, style)
