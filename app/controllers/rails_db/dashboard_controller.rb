@@ -2,9 +2,9 @@ module RailsDb
   class DashboardController < RailsDb::ApplicationController
 
     def index
-      Debuggers.print('1. Starting index action')
+      Debuggers.print '1. Starting index action'
       begin
-        Debuggers.print('2. Before render')
+        Debuggers.print '2. Before render'
         render
         Debuggers.print '3. After render'
       rescue => e
