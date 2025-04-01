@@ -1,7 +1,7 @@
 class Debuggers
   class << self
     def print(msg)
-      silent = false
+      silent = true
       puts msg unless silent
     end
   end
