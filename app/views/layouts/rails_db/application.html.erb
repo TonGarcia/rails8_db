@@ -5,6 +5,19 @@
   <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag "rails_db/application" %>
   <% unless ENV["RAILS_ENV"] == "test" %>
+    <%= javascript_include_tag(
+          "codemirror/codemirror.js",
+          "codemirror/modes/sql.js",
+          "codemirror/addons/hint/show-hint.js",
+          "codemirror/addons/hint/sql-hint.js",
+          "rails_db/jquery.js",
+          "rails_db/jquery.cookie.js",
+          "rails_db/rails-ujs.js",
+          "rails_db/foundation.min.js",
+          "rails_db/sticky.js",
+          "rails_db/show_hide_columns.js",
+          "rails_db/search.js"
+        ) %>
     <%= javascript_include_tag "rails_db/application" %>
   <% end %>
 
