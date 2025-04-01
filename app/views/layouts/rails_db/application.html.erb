@@ -4,7 +4,9 @@
   <title><%= [yield(:title), 'Rails DB'].reject(&:blank?).join(' - ') %></title>
   <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag "rails_db/application" %>
-
+  <% unless ENV["RAILS_ENV"] == "test" %>
+    <%= javascript_include_tag "rails_db/application" %>
+  <% end %>
 
   <%= csrf_meta_tags %>
 
